@@ -1,29 +1,53 @@
 {
   "heroLabel": "Full-Stack Builder & Strategist",
   "heroTitle": "Strategy that ships.\nSystems that sell.",
-  "heroTagline": "Most agencies hire a strategist who can't build, and a developer who can't sell. I bridge the gap: building high-converting funnels and ghostwriting the executive LinkedIn content that feeds them.",
+  "heroTagline": "Most agencies hire a strategist who can't build, and a developer who can't sell. I bridge the gap: high-converting digital funnels and the executive LinkedIn content that feeds them.",
   "heroCTA1Text": "Book a Strategy Call",
-  "heroCTA2Text": "Explore Teardowns & Builds",
-  "servicesHeadline": "Strategy to shipped execution.\nThree focused offerings.",
+  "heroCTA2Text": "Explore Work & Teardowns",
+  "servicesHeadline": "Explicit Offerings.\nStrategy Meets the Build.",
   "casesHeadline": "Real Strategy. Real Code. Real Scale.",
   "skillsHeadline": "The Builder-Strategist Stack.",
   "ctaHeadline": "Ready to build an inbound engine\nthat compounds?",
   "ctaSubtext": "30 minutes. No pitch. Just real positioning, funnel review, and clear next steps.",
   "services": [
     {
+      "badge": "Monthly Retainer",
       "title": "Founder Authority & LinkedIn Inbound",
-      "description": "Turn your personal LinkedIn into a qualified pipeline machine: 3–4 high-signal weekly posts & carousels, profile repositioning, and comment-to-DM inbound funnels.",
-      "link": "/book"
+      "description": "Turn your personal LinkedIn into a qualified inbound pipeline without spending hours writing every week.",
+      "deliverables": [
+        "3–4 High-impact weekly posts & document carousels",
+        "Executive profile repositioned as an inbound funnel",
+        "Comment-to-DM lead magnets & outbound conversation triggers",
+        "Weekly pipeline tracking, audience growth & iteration"
+      ],
+      "scope": "Ongoing Monthly Partnership",
+      "cta": "Book Authority Call →"
     },
     {
-      "title": "Full-Stack GTM & Funnel Sprints",
-      "description": "Custom high-converting landing pages, interactive qualification widgets, and automated booking/CRM flows built cleanly in React & Supabase in 14–21 days.",
-      "link": "/book"
+      "badge": "14–21 Day Sprint",
+      "title": "Full-Stack GTM & Funnel Sprint",
+      "description": "Turn your offer into a live, high-converting digital system engineered from interface to database.",
+      "deliverables": [
+        "Positioning, ICP definition & messaging architecture",
+        "Custom high-converting landing page (React/modern web)",
+        "Automated qualification & Cal.com scheduling workflow",
+        "CRM & lead routing with zero third-party bloat"
+      ],
+      "scope": "Fixed-Scope Sprint (14–21 Days)",
+      "cta": "Book Funnel Sprint →"
     },
     {
-      "title": "Growth Architecture & Strategy",
-      "description": "90-day audience playbooks, multi-platform content repurposing systems, and webinar-to-sale funnel modeling for high-scale media and tech brands.",
-      "link": "/book"
+      "badge": "Full Partnership",
+      "title": "The Complete Inbound Engine",
+      "description": "The complete loop: I build the conversion machine in Month 1 and run the distribution every week thereafter.",
+      "deliverables": [
+        "Full Funnel Sprint build (Landing page + booking + CRM)",
+        "3-Month executive LinkedIn ghostwriting & distribution",
+        "Continuous conversion rate optimization & split-testing",
+        "Single point of contact: the builder and strategist in one"
+      ],
+      "scope": "Sprint Build + 3-Month Retainer",
+      "cta": "Book Complete Partnership →"
     }
   ],
   "skills": [

@@ -29,7 +29,7 @@ const serviceIcons: Record<string, string> = {
         <div class="hero-content">
           <span class="hero-label">{home.heroLabel}</span>
           <h1 class="hero-title" set:html={home.heroTitle.replace(/\n/g, '<br>')}></h1>
-          <span class="hero-tagline">"{home.heroTagline}"</span>
+          <p class="hero-tagline">{home.heroTagline}</p>
 
           <div class="hero-actions">
             <a href="/book" class="btn btn-primary">{home.heroCTA1Text}</a>
@@ -60,28 +60,46 @@ const serviceIcons: Record<string, string> = {
       </div>
     </section>
 
-    <!-- SERVICES GRID -->
+    <!-- SERVICES / OFFERS GRID -->
     <section id="offers" class="section" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">What I Do</span>
+          <span class="section-label">What I Deliver</span>
           <h2 id="services-heading" set:html={home.servicesHeadline.replace(/\n/g, '<br>')}></h2>
         </div>
 
         <div class="services-grid">
-          {home.services.map(service => (
+          {home.services.map((service: any) => (
             <article class="service-card reveal">
-              <div class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                  <Fragment set:html={serviceIcons[service.title] || ''} />
-                </svg>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <Fragment set:html={serviceIcons[service.title] || ''} />
+                  </svg>
+                </div>
+                <span class="tag tag-orange" style="font-size: 0.68rem;">{service.badge}</span>
               </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <a href={service.link} class="service-link">
-                Explore offering
-                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-              </a>
+              <h3 style="margin-top: 8px; font-size: 1.22rem; line-height: 1.3;">{service.title}</h3>
+              <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.5;">{service.description}</p>
+              
+              <div style="margin: 8px 0; border-top: 1px solid var(--border); padding-top: 14px;">
+                <p style="font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px;">Deliverables:</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; margin: 0;">
+                  {service.deliverables.map((item: string) => (
+                    <li style="font-size: 0.84rem; display: flex; gap: 8px; align-items: flex-start; line-height: 1.35;">
+                      <span style="color: var(--orange); font-weight: 800; line-height: 1;">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(0,0,0,0.15); display: flex; flex-direction: column; gap: 10px;">
+                <span style="font-size: 0.76rem; font-family: var(--font-heading); font-weight: 600; color: var(--text-muted);">{service.scope}</span>
+                <a href="/book" class="btn btn-primary btn-sm" style="justify-content: center; text-align: center; width: 100%;">
+                  {service.cta}
+                </a>
+              </div>
             </article>
           ))}
         </div>
