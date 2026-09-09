@@ -1,72 +1,43 @@
 {
   "heroLabel": "Full-Stack Builder & Strategist",
-  "heroTitle": "I build the product.\nAnd the system behind it.",
-  "heroTagline": "React, Supabase, AI-assisted execution, and strategy that ships.",
-  "heroCTA1Text": "Start a Project",
-  "heroCTA2Text": "View Projects",
-  "servicesHeadline": "Strategy to shipped product.\nOne connected system.",
-  "casesHeadline": "Built end to end.\nShipped for real.",
-  "skillsHeadline": "The builder's stack.",
-  "ctaHeadline": "Have something worth\nbuilding?",
-  "ctaSubtext": "Let's turn the idea, offer, or workflow into something people can use.",
+  "heroTitle": "Strategy that ships.\nSystems that sell.",
+  "heroTagline": "Most agencies hire a strategist who can't build, and a developer who can't sell. I bridge the gap: building high-converting funnels and ghostwriting the executive LinkedIn content that feeds them.",
+  "heroCTA1Text": "Book a Strategy Call",
+  "heroCTA2Text": "Explore Teardowns & Builds",
+  "servicesHeadline": "Strategy to shipped execution.\nThree focused offerings.",
+  "casesHeadline": "Real Strategy. Real Code. Real Scale.",
+  "skillsHeadline": "The Builder-Strategist Stack.",
+  "ctaHeadline": "Ready to build an inbound engine\nthat compounds?",
+  "ctaSubtext": "30 minutes. No pitch. Just real positioning, funnel review, and clear next steps.",
   "services": [
     {
-      "title": "Full-Stack Builds",
-      "description": "Fast, focused web products built from interface to database with React, Supabase, and production-ready deployment.",
-      "link": "/growth"
+      "title": "Founder Authority & LinkedIn Inbound",
+      "description": "Turn your personal LinkedIn into a qualified pipeline machine: 3–4 high-signal weekly posts & carousels, profile repositioning, and comment-to-DM inbound funnels.",
+      "link": "/book"
     },
     {
-      "title": "AI-Assisted Systems",
-      "description": "Practical internal tools and workflows that use AI to reduce busywork, speed up execution, and keep humans in control.",
-      "link": "/linkedin"
+      "title": "Full-Stack GTM & Funnel Sprints",
+      "description": "Custom high-converting landing pages, interactive qualification widgets, and automated booking/CRM flows built cleanly in React & Supabase in 14–21 days.",
+      "link": "/book"
     },
     {
-      "title": "Product Strategy",
-      "description": "Clear product scope, user flows, positioning, and priorities shaped before code turns ambiguity into expensive rework.",
-      "link": "/strategy"
-    },
-    {
-      "title": "Offers & Funnels",
-      "description": "Offers, landing pages, qualification, conversion paths, sales systems, and onboarding designed as one connected journey.",
-      "link": "/copy-writing"
+      "title": "Growth Architecture & Strategy",
+      "description": "90-day audience playbooks, multi-platform content repurposing systems, and webinar-to-sale funnel modeling for high-scale media and tech brands.",
+      "link": "/book"
     }
   ],
   "skills": [
-    {
-      "name": "React"
-    },
-    {
-      "name": "Supabase"
-    },
-    {
-      "name": "JavaScript"
-    },
-    {
-      "name": "Full-Stack SaaS"
-    },
-    {
-      "name": "AI-Assisted Development"
-    },
-    {
-      "name": "Product Strategy"
-    },
-    {
-      "name": "Offer Creation"
-    },
-    {
-      "name": "Funnel Architecture"
-    },
-    {
-      "name": "Conversion Copy"
-    },
-    {
-      "name": "Sales Systems"
-    },
-    {
-      "name": "Vercel"
-    },
-    {
-      "name": "Rapid Prototyping"
-    }
+    { "name": "LinkedIn Ghostwriting" },
+    { "name": "GTM & Positioning" },
+    { "name": "Funnel Architecture" },
+    { "name": "React & Supabase" },
+    { "name": "Full-Stack SaaS" },
+    { "name": "Content Systems" },
+    { "name": "Conversion Copywriting" },
+    { "name": "Offer Design" },
+    { "name": "Automated Booking (Cal.com)" },
+    { "name": "Vercel & Next/Astro" },
+    { "name": "Audience Recovery" },
+    { "name": "AI-Assisted Systems" }
   ]
 }

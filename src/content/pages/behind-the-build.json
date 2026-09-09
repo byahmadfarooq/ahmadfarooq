@@ -1,41 +1,36 @@
 {
-  "heroTitle": "The builder behind\nthe strategy.",
-  "heroDesc": "Part developer, part strategist: I turn useful ideas into working products and the business systems around them.",
-  "storyHeadline": "I learned strategy.\nThen learned to ship it.",
-  "bio": "I'm Ahmad Farooq, a Full-Stack Builder & Strategist working across React, Supabase, AI-assisted tools, and the commercial thinking that makes a product useful.\n\nMy background is in agency strategy: shaping offers, building funnels, clarifying positioning, and finding the shortest path from attention to action. That taught me how businesses sell. Building software taught me how to turn that thinking into something people can actually use.\n\nNow I work across both sides. I can scope the product, map the user journey, build the interface and database, and connect it to the offer, sales flow, and onboarding experience. ARKA went from idea to a working SaaS dashboard in under 24 hours. Other builds span bilingual charity experiences, agency funnel systems, and conversion-focused service websites.\n\nI use AI as leverage, not as a substitute for judgment. The goal is simple: think clearly, build quickly, and ship work that solves the right problem.",
-  "principlesHeadline": "Six principles.\nNon-negotiable.",
+  "heroTitle": "The Builder Behind\nthe Strategy.",
+  "heroDesc": "From Renala Khurd to managing distribution for 2M+ media brands: why I refuse to let strategy and code live in separate rooms.",
+  "storyHeadline": "The gap most agencies never close:\nThe person who names the strategy must ship it.",
+  "bio": "In May 2021, I woke up in a hospital bed with a broken leg and no idea how long I would be there. The accident happened while I was managing a school TEDx event. Until that afternoon, football was my entire identity. When sport was taken off the table, the hunger to build didn't disappear—it redirected into organizing people, events, and systems.\n\nI became Head Boy, organized Okara's first inter-school competitions, brought two TEDx events and an international sixty-second film festival to a city that had never seen them, and launched the Joga Bonito Cup. Managing complex moving pieces became what held me together.\n\nThat drive followed me to Lahore. While other students were strictly memorizing textbooks, I was on the freelance frontline: managing digital strategy for 13 brand accounts simultaneously at Onesoft, architecting the 90-day growth framework for Coin Bureau (crypto's largest media titan with 2M+ subscribers), diagnosing a stalled 700k+ account for Zara Shafiq Khan, and generating a $300K attributed pipeline for a Series A EdTech founder.\n\nWorking across multiple agencies revealed an acute, expensive failure point: most hiring assumes you need a strategist to figure out what to say, and a builder to make the thing that says it. Teams split the role, then spend months translating between two people who were supposed to be one function. The strategist stalls at the handoff; the builder ships the wrong thing fast.\n\nI decided to close that gap completely. I taught myself full-stack development—React, Supabase, database design, modern frontend architecture, and AI tooling—so there is zero translation loss. ARKA went from idea to a live SaaS dashboard in under 24 hours.\n\nI closed my academic gaps honestly through the GED, scoring 90–95% across subjects while working full-time. Today, through my studio Kaivex Systems, I partner with founders and companies who are tired of fragmented agencies: I build their high-converting digital funnels and ghostwrite the executive LinkedIn content that drives real revenue.",
+  "principlesHeadline": "Five principles.\nNon-negotiable.",
   "principles": [
     {
       "num": "01",
-      "title": "Ship the Useful Version",
-      "body": "Start with the smallest complete solution to the real problem. A working product creates better feedback than a perfect plan."
+      "title": "The Handoff Is Where Momentum Dies",
+      "body": "When the person who writes the copy doesn't understand code, and the developer doesn't understand conversion, the product gets diluted. The person who names the strategy should ship the system."
     },
     {
       "num": "02",
-      "title": "Strategy Meets the Build",
-      "body": "Product decisions and business decisions belong in the same room. The interface, offer, funnel, and onboarding should reinforce each other."
+      "title": "Distribution First, Code Second",
+      "body": "A flawless SaaS or website that nobody visits is still a failed launch. Systems must be engineered with distribution, hooks, and organic inbound baked into the DNA from day zero."
     },
     {
       "num": "03",
-      "title": "Tools Serve the Outcome",
-      "body": "React, Supabase, Vercel, and AI are means, not the pitch. The right stack is the one that gets a reliable product into users' hands."
+      "title": "Speed Produces Clarity",
+      "body": "ARKA went from whiteboard to live database and deployed SaaS in under 24 hours. A live working product in front of real users creates 10x better feedback than a 40-page deck."
     },
     {
       "num": "04",
-      "title": "Build Connected Systems",
-      "body": "A product does not live alone. Content, sales, data, operations, and delivery work better when they share one clear system."
+      "title": "Compounding Over Spikes",
+      "body": "We don't build one-off hype campaigns that spike and vanish. We build owned systems—repeatable LinkedIn content engines, high-converting landing pages, and automated funnels that compound over quarters."
     },
     {
       "num": "05",
-      "title": "Specificity Converts",
-      "body": "Clear users, clear problems, and clear outcomes make both software and offers stronger. Vagueness is expensive."
-    },
-    {
-      "num": "06",
-      "title": "AI With Judgment",
-      "body": "AI speeds up research, iteration, and production. Taste, context, and responsibility still belong to the builder."
+      "title": "AI With Discerning Taste",
+      "body": "AI accelerates research and code production 10x, but taste, market empathy, and commercial accountability remain strictly human. Leverage the machine, but never outsource judgment."
     }
   ],
-  "ctaHeadline": "Let's build something\npeople can use.",
-  "ctaSubtext": "Bring the idea, bottleneck, or half-built system. We'll find the clearest path forward."
+  "ctaHeadline": "Ready to build something\nthat compounds?",
+  "ctaSubtext": "No 5-person agency handoffs. Just clear strategy and shipped systems."
 }

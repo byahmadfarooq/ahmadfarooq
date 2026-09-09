@@ -8,10 +8,9 @@ import settings from '../content/global/settings.json';
 import home from '../content/pages/home.json';
 
 const serviceIcons: Record<string, string> = {
-  'Full-Stack Builds': `<polyline points="2,22 8,14 14,18 20,8 26,4"/><circle cx="26" cy="4" r="2" fill="currentColor" stroke="none"/>`,
-  'AI-Assisted Systems': `<rect x="3" y="3" width="22" height="16" rx="2"/><path d="M9 25h10M14 19v6"/><circle cx="9" cy="11" r="2"/><path d="M14 11h7M14 14h5"/>`,
-  'Product Strategy': `<circle cx="14" cy="14" r="11"/><circle cx="14" cy="14" r="4"/><line x1="14" y1="3" x2="14" y2="10"/><line x1="14" y1="18" x2="14" y2="25"/><line x1="3" y1="14" x2="10" y2="14"/><line x1="18" y1="14" x2="25" y2="14"/>`,
-  'Offers & Funnels': `<path d="M4 20l6-6 4 4 10-12"/><line x1="4" y1="24" x2="24" y2="24"/><circle cx="20" cy="6" r="2" fill="none"/>`,
+  'Founder Authority & LinkedIn Inbound': `<rect x="3" y="3" width="22" height="16" rx="2"/><path d="M9 25h10M14 19v6"/><circle cx="9" cy="11" r="2"/><path d="M14 11h7M14 14h5"/>`,
+  'Full-Stack GTM & Funnel Sprints': `<polyline points="2,22 8,14 14,18 20,8 26,4"/><circle cx="26" cy="4" r="2" fill="currentColor" stroke="none"/>`,
+  'Growth Architecture & Strategy': `<circle cx="14" cy="14" r="11"/><circle cx="14" cy="14" r="4"/><line x1="14" y1="3" x2="14" y2="10"/><line x1="14" y1="18" x2="14" y2="25"/><line x1="3" y1="14" x2="10" y2="14"/><line x1="18" y1="14" x2="25" y2="14"/>`,
 };
 ---
 
@@ -39,16 +38,16 @@ const serviceIcons: Record<string, string> = {
 
           <div class="hero-metrics">
             <div>
-              <span class="hero-metric-num">4</span>
-              <span class="hero-metric-label">Featured Builds</span>
+              <span class="hero-metric-num">10×</span>
+              <span class="hero-metric-label">LinkedIn Growth (Coin Bureau)</span>
+            </div>
+            <div>
+              <span class="hero-metric-num">$300K</span>
+              <span class="hero-metric-label">Pipeline from Authority</span>
             </div>
             <div>
               <span class="hero-metric-num">&lt;24h</span>
-              <span class="hero-metric-label">Fastest SaaS Build</span>
-            </div>
-            <div>
-              <span class="hero-metric-num">Full</span>
-              <span class="hero-metric-label">Stack + Strategy</span>
+              <span class="hero-metric-label">Idea to Working SaaS</span>
             </div>
           </div>
         </div>
@@ -62,7 +61,7 @@ const serviceIcons: Record<string, string> = {
     </section>
 
     <!-- SERVICES GRID -->
-    <section class="section" aria-labelledby="services-heading">
+    <section id="offers" class="section" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">What I Do</span>
@@ -80,7 +79,7 @@ const serviceIcons: Record<string, string> = {
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               <a href={service.link} class="service-link">
-                Explore service
+                Explore offering
                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
               </a>
             </article>
@@ -89,83 +88,21 @@ const serviceIcons: Record<string, string> = {
       </div>
     </section>
 
-    <!-- CASE STUDIES -->
+    <!-- CASE STUDIES & TEARDOWNS -->
     <section id="projects" class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="cases-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Projects</span>
+          <span class="section-label">Selected Work &amp; Teardowns</span>
           <h2 id="cases-heading" set:html={home.casesHeadline.replace(/\n/g, '<br>')}></h2>
         </div>
 
         <div class="case-studies-list">
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left"><span class="case-study-client">ARKA</span><span class="case-study-title">Brand Command Center</span></div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region"><div class="case-study-content">
-              <div class="case-study-detail"><h4>The Build</h4><p>A full-stack SaaS dashboard for LinkedIn creators and freelancers, bringing daily execution and revenue workflows into one focused workspace.</p><br><h4>Stack &amp; Scope</h4><p>Built solo in under 24 hours with React, Supabase, and Vercel. Includes a task manager, content pipeline, outbound and inbound sales pipelines, and analytics.</p></div>
-              <div class="case-study-detail"><h4>Highlights</h4><div class="case-study-outcomes">
-                <div class="outcome-item"><span class="outcome-num">&lt;24h</span><span class="outcome-label">From idea to working SaaS</span></div>
-                <div class="outcome-item"><span class="outcome-num">4</span><span class="outcome-label">Core workflows in one dashboard</span></div>
-                <div class="outcome-item"><span class="outcome-num">Solo</span><span class="outcome-label">Strategy, product, and build</span></div>
-              </div></div>
-            </div></div>
-          </div>
-
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left"><span class="case-study-client">Etimad Foundation</span><span class="case-study-title">Bilingual Ramadan Charity Website</span></div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region"><div class="case-study-content">
-              <div class="case-study-detail"><h4>The Build</h4><p>A multi-page NGO website built pro bono for a Ramadan food drive, designed to make the campaign accessible in both Urdu and English.</p><br><h4>Stack &amp; Scope</h4><p>Built with a complete donation journey, bilingual content experience, volunteer registration, and clear campaign information across multiple pages.</p></div>
-              <div class="case-study-detail"><h4>Highlights</h4><div class="case-study-outcomes">
-                <div class="outcome-item"><span class="outcome-num">2</span><span class="outcome-label">Languages: Urdu and English</span></div>
-                <div class="outcome-item"><span class="outcome-num">End-to-end</span><span class="outcome-label">Donation flow</span></div>
-                <div class="outcome-item"><span class="outcome-num">Built in</span><span class="outcome-label">Volunteer registration</span></div>
-              </div></div>
-            </div></div>
-          </div>
-
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left"><span class="case-study-client">Agency Client</span><span class="case-study-title">Agency Funnel System</span></div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region"><div class="case-study-content">
-              <div class="case-study-detail"><h4>The Build</h4><p>An end-to-end acquisition and conversion system built to turn a stronger offer into qualified conversations and a cleaner client experience.</p><br><h4>Stack &amp; Scope</h4><p>Created the offer, landing page, three-step qualification flow, conversion architecture, sales system, and onboarding journey as one connected funnel.</p></div>
-              <div class="case-study-detail"><h4>Highlights</h4><div class="case-study-outcomes">
-                <div class="outcome-item"><span class="outcome-num">3-step</span><span class="outcome-label">Lead qualification flow</span></div>
-                <div class="outcome-item"><span class="outcome-num">Full</span><span class="outcome-label">Offer-to-onboarding journey</span></div>
-                <div class="outcome-item"><span class="outcome-num">One</span><span class="outcome-label">Connected sales system</span></div>
-              </div></div>
-            </div></div>
-          </div>
-
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left"><span class="case-study-client">Unilimo</span><span class="case-study-title">Luxury Limo Service Website</span></div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region"><div class="case-study-content">
-              <div class="case-study-detail"><h4>The Build</h4><p>A polished single-page website for a luxury limo service, built to move visitors from service discovery to inquiry without friction.</p><br><h4>Stack &amp; Scope</h4><p>Designed and developed as a focused, responsive experience with a custom built-in booking and inquiry form, deployed live on Vercel.</p><p style="margin-top:16px;"><a href="https://unilimo.vercel.app/" target="_blank" rel="noopener noreferrer" class="service-link">View live project →</a></p></div>
-              <div class="case-study-detail"><h4>Highlights</h4><div class="case-study-outcomes">
-                <div class="outcome-item"><span class="outcome-num">1 page</span><span class="outcome-label">Focused conversion journey</span></div>
-                <div class="outcome-item"><span class="outcome-num">Custom</span><span class="outcome-label">Booking and inquiry form</span></div>
-                <div class="outcome-item"><span class="outcome-num">Live</span><span class="outcome-label">Production deployment</span></div>
-              </div></div>
-            </div></div>
-          </div>
-        </div>
-
-        <div hidden>
-
+          <!-- 1. Coin Bureau -->
           <div class="case-study reveal">
             <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-study-header-left">
                 <span class="case-study-client">Coin Bureau</span>
-                <span class="case-study-title">10× LinkedIn Growth for Crypto's Biggest Media Brand</span>
+                <span class="case-study-title">10× LinkedIn Growth for Crypto's Biggest Media Brand (2M+ Audience)</span>
               </div>
               <div class="case-study-toggle" aria-hidden="true">+</div>
             </div>
@@ -173,10 +110,10 @@ const serviceIcons: Record<string, string> = {
               <div class="case-study-content">
                 <div class="case-study-detail">
                   <h4>The Challenge</h4>
-                  <p>Coin Bureau had massive YouTube and newsletter audiences but a dormant LinkedIn presence. They needed a systematic approach to content distribution that would drive newsletter subscribers from a professional audience without alienating their crypto-native following.</p>
+                  <p>Coin Bureau had massive YouTube and newsletter audiences but a dormant LinkedIn presence. They needed a systematic approach to content distribution that would drive high-value newsletter subscribers from an institutional professional audience without alienating their crypto-native following.</p>
                   <br>
                   <h4>The Approach</h4>
-                  <p>Built a LinkedIn content system repurposing their existing research into executive-friendly formats. Defined audience segments, posting cadence, and hook frameworks. Launched a 90-day testing sprint across content types and engagement tactics.</p>
+                  <p>Built a full 90-day LinkedIn content and growth system repurposing deep-dive YouTube research into executive-friendly formats. Defined strict audience tiers, hook frameworks, and a testing sprint across content types that converted professional viewers into recurring readers.</p>
                 </div>
                 <div class="case-study-detail">
                   <h4>Results</h4>
@@ -199,10 +136,11 @@ const serviceIcons: Record<string, string> = {
             </div>
           </div>
 
+          <!-- 2. EdTech Founder -->
           <div class="case-study reveal">
             <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-study-header-left">
-                <span class="case-study-client">EdTech Founder</span>
+                <span class="case-study-client">Series A EdTech Founder</span>
                 <span class="case-study-title">0 to Authority: Building a $300K Pipeline from LinkedIn</span>
               </div>
               <div class="case-study-toggle" aria-hidden="true">+</div>
@@ -211,10 +149,10 @@ const serviceIcons: Record<string, string> = {
               <div class="case-study-content">
                 <div class="case-study-detail">
                   <h4>The Challenge</h4>
-                  <p>A Series A EdTech founder had product-market fit but zero personal brand presence. Inbound leads were stagnant and they relied entirely on outbound SDRs burning through budget.</p>
+                  <p>A Series A EdTech founder had strong product-market fit but zero personal brand presence. Inbound enterprise leads were stagnant and they relied entirely on outbound SDR cold emails burning through capital.</p>
                   <br>
                   <h4>The Approach</h4>
-                  <p>Repositioned the founder from "CEO of EdTech startup" to "the future of corporate learning". Built a 5-pillar content system, optimised the full LinkedIn profile, and established a 3× per week posting rhythm.</p>
+                  <p>Repositioned the founder from "CEO of EdTech startup" to "the category leader of corporate learning". Built a 5-pillar thought leadership architecture, optimized the full LinkedIn profile into an inbound landing page, and established a 3× per week posting cadence with comment-to-DM lead magnets.</p>
                 </div>
                 <div class="case-study-detail">
                   <h4>Results</h4>
@@ -229,7 +167,7 @@ const serviceIcons: Record<string, string> = {
                     </div>
                     <div class="outcome-item">
                       <span class="outcome-num">3</span>
-                      <span class="outcome-label">Inbound partnership deals in 90 days</span>
+                      <span class="outcome-label">Inbound enterprise deals closed</span>
                     </div>
                   </div>
                 </div>
@@ -237,11 +175,169 @@ const serviceIcons: Record<string, string> = {
             </div>
           </div>
 
+          <!-- 3. Zara Shafiq Khan -->
+          <div class="case-study reveal">
+            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-study-header-left">
+                <span class="case-study-client">Zara Shafiq Khan</span>
+                <span class="case-study-title">Audience Recovery: 4-Pillar Content Reset for 700k+ Followers</span>
+              </div>
+              <div class="case-study-toggle" aria-hidden="true">+</div>
+            </div>
+            <div class="case-study-body" role="region">
+              <div class="case-study-content">
+                <div class="case-study-detail">
+                  <h4>The Challenge</h4>
+                  <p>A major personal brand with over 700,000 followers had stalled in growth and experienced declining engagement due to format fatigue and uncalibrated posting styles.</p>
+                  <br>
+                  <h4>The Approach</h4>
+                  <p>Diagnosed algorithmic and psychological dropoffs. Engineered a strict 4-pillar content framework (Relatable, Educational, Aspirational, Entertainment), restructured hook velocity, and implemented structured engagement recovery tactics.</p>
+                </div>
+                <div class="case-study-detail">
+                  <h4>Results</h4>
+                  <div class="case-study-outcomes">
+                    <div class="outcome-item">
+                      <span class="outcome-num">700K+</span>
+                      <span class="outcome-label">Audience diagnosed and reset</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">4-Pillar</span>
+                      <span class="outcome-label">Content framework deployed</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">Immediate</span>
+                      <span class="outcome-label">Engagement &amp; reach recovery</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Bitward -->
+          <div class="case-study reveal">
+            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-study-header-left">
+                <span class="case-study-client">Bitward</span>
+                <span class="case-study-title">Funnel Architecture: Multi-Platform Webinar &amp; Telegram Conversion</span>
+              </div>
+              <div class="case-study-toggle" aria-hidden="true">+</div>
+            </div>
+            <div class="case-study-body" role="region">
+              <div class="case-study-content">
+                <div class="case-study-detail">
+                  <h4>The Challenge</h4>
+                  <p>Bitward needed an organic acquisition and onboarding funnel to convert social media attention into active investors and fund participants without burning budget on cold paid ads.</p>
+                  <br>
+                  <h4>The Approach</h4>
+                  <p>Designed a connected funnel system: organic multi-channel content driving to high-signal Telegram community and newsletter capture, automated webinar onboarding, and friction-free fund conversion at the webinar finish line.</p>
+                </div>
+                <div class="case-study-detail">
+                  <h4>Results</h4>
+                  <div class="case-study-outcomes">
+                    <div class="outcome-item">
+                      <span class="outcome-num">Full</span>
+                      <span class="outcome-label">Content-to-fund conversion flow</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">2-Stage</span>
+                      <span class="outcome-label">Telegram &amp; newsletter capture</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">High</span>
+                      <span class="outcome-label">Qualified lead-to-call rate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. ARKA SaaS -->
+          <div class="case-study reveal">
+            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-study-header-left">
+                <span class="case-study-client">ARKA</span>
+                <span class="case-study-title">SaaS Brand Command Center (Built Solo in &lt;24 Hours)</span>
+              </div>
+              <div class="case-study-toggle" aria-hidden="true">+</div>
+            </div>
+            <div class="case-study-body" role="region">
+              <div class="case-study-content">
+                <div class="case-study-detail">
+                  <h4>The Build</h4>
+                  <p>A full brand operating system for LinkedIn creators, consultants, and agencies. Replaces 4–5 disjointed SaaS tools into one unified command center.</p>
+                  <br>
+                  <h4>Stack &amp; Scope</h4>
+                  <p>Built solo in under 24 hours with React, Supabase, and Vercel. Features live database connections, MRR tracking, Kanban workflow, content calendar, 7-stage outbound pipeline, inbound CRM, and analytics.</p>
+                </div>
+                <div class="case-study-detail">
+                  <h4>Highlights</h4>
+                  <div class="case-study-outcomes">
+                    <div class="outcome-item">
+                      <span class="outcome-num">&lt;24h</span>
+                      <span class="outcome-label">From idea to working SaaS</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">7-Stage</span>
+                      <span class="outcome-label">Integrated outbound pipeline</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">Solo</span>
+                      <span class="outcome-label">Strategy, database, and UI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Unilimo -->
+          <div class="case-study reveal">
+            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-study-header-left">
+                <span class="case-study-client">Unilimo</span>
+                <span class="case-study-title">Luxury Transport Platform &amp; Live Booking Engine</span>
+              </div>
+              <div class="case-study-toggle" aria-hidden="true">+</div>
+            </div>
+            <div class="case-study-body" role="region">
+              <div class="case-study-content">
+                <div class="case-study-detail">
+                  <h4>The Build</h4>
+                  <p>A polished, high-converting digital platform for a New York luxury limousine service, built to move high-net-worth clients from service discovery to quote and booking without friction.</p>
+                  <br>
+                  <h4>Stack &amp; Scope</h4>
+                  <p>Designed and built with dark luxury aesthetics, fleet showcase gallery, live dynamic rate cards by airport/city, and a custom built-in quote-request system deployed on Vercel.</p>
+                  <p style="margin-top:16px;"><a href="https://unilimo.vercel.app/" target="_blank" rel="noopener noreferrer" class="service-link">View live project →</a></p>
+                </div>
+                <div class="case-study-detail">
+                  <h4>Highlights</h4>
+                  <div class="case-study-outcomes">
+                    <div class="outcome-item">
+                      <span class="outcome-num">100%</span>
+                      <span class="outcome-label">Custom luxury visual architecture</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">Custom</span>
+                      <span class="outcome-label">Quote &amp; rate card engine</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">Live</span>
+                      <span class="outcome-label">Production deployment</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Zedsource -->
           <div class="case-study reveal">
             <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-study-header-left">
                 <span class="case-study-client">Zedsource</span>
-                <span class="case-study-title">Complete Brand Identity for a Digital-First Staffing Company</span>
+                <span class="case-study-title">Complete Brand Identity &amp; Positioning for Digital-First Staffing</span>
               </div>
               <div class="case-study-toggle" aria-hidden="true">+</div>
             </div>
@@ -263,11 +359,50 @@ const serviceIcons: Record<string, string> = {
                     </div>
                     <div class="outcome-item">
                       <span class="outcome-num">60%</span>
-                      <span class="outcome-label">Reduction in CAC post brand launch</span>
+                      <span class="outcome-label">Reduction in CAC post launch</span>
                     </div>
                     <div class="outcome-item">
                       <span class="outcome-num">5×</span>
-                      <span class="outcome-label">Profile visits after LinkedIn rebrand</span>
+                      <span class="outcome-label">Profile visits after rebrand</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Etimad Foundation -->
+          <div class="case-study reveal">
+            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-study-header-left">
+                <span class="case-study-client">Etimad Foundation</span>
+                <span class="case-study-title">Bilingual Ramadan Charity &amp; Donation Platform</span>
+              </div>
+              <div class="case-study-toggle" aria-hidden="true">+</div>
+            </div>
+            <div class="case-study-body" role="region">
+              <div class="case-study-content">
+                <div class="case-study-detail">
+                  <h4>The Build</h4>
+                  <p>A multi-page NGO platform built pro bono for a nationwide Ramadan food drive, designed to make contributions seamless in both Urdu and English.</p>
+                  <br>
+                  <h4>Stack &amp; Scope</h4>
+                  <p>Mobile-first architecture with Easypaisa and Jazzcash payment integration, donor tracking, volunteer registration workflows, and full bilingual localization.</p>
+                </div>
+                <div class="case-study-detail">
+                  <h4>Highlights</h4>
+                  <div class="case-study-outcomes">
+                    <div class="outcome-item">
+                      <span class="outcome-num">2</span>
+                      <span class="outcome-label">Languages (English &amp; Urdu)</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">End-to-end</span>
+                      <span class="outcome-label">Mobile payment integration</span>
+                    </div>
+                    <div class="outcome-item">
+                      <span class="outcome-num">100%</span>
+                      <span class="outcome-label">Pro bono community initiative</span>
                     </div>
                   </div>
                 </div>
@@ -282,8 +417,30 @@ const serviceIcons: Record<string, string> = {
     <!-- SELECTED CLIENTS -->
     <ClientsGrid />
 
+    <!-- SUBSTACK DISPATCH -->
+    <section id="dispatch" class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="dispatch-heading">
+      <div class="container" style="max-width: 760px; text-align: center;">
+        <div class="section-header reveal" style="text-align: center;">
+          <span class="section-label">Weekly Newsletter</span>
+          <h2 id="dispatch-heading">The Builder-Strategist Dispatch.</h2>
+          <p style="margin-top: 16px; font-size: 1.05rem; color: var(--text-muted); line-height: 1.6;">
+            Every week, I break down one real GTM system, founder LinkedIn framework, or full-stack automation. No corporate fluff. Just actionable blueprints.
+          </p>
+        </div>
+
+        <div class="reveal" style="margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+          <a href="https://byahmadfarooq.substack.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1rem; padding: 14px 28px;">
+            Read &amp; Subscribe on Substack →
+          </a>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+            Free weekly breakdowns read by founders, operators, and builders.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- SKILLS TOOLKIT -->
-    <section class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="skills-heading">
+    <section class="section" style="border-bottom: 2px solid var(--border);" aria-labelledby="skills-heading">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">Skills Toolkit</span>

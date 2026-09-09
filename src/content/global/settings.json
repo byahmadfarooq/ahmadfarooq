@@ -1,8 +1,9 @@
 {
   "email": "byahmadfarooq@outlook.com",
-  "linkedinUrl": "https://www.linkedin.com/in/byahmad/",
+  "linkedinUrl": "https://www.linkedin.com/in/byahmadd/",
   "twitterUrl": "https://x.com/ahmaddfaroooq",
   "twitterHandle": "@ahmaddfaroooq",
+  "substackUrl": "https://byahmadfarooq.substack.com/",
   "stats": {
     "brandsCount": "4",
     "revenueLabel": "3×",
@@ -10,15 +11,15 @@
   },
   "footerPages": [
     { "label": "Home", "href": "/" },
+    { "label": "Projects & Teardowns", "href": "/#projects" },
     { "label": "Behind the Build", "href": "/behind-the-build" },
-    { "label": "Blog", "href": "/blog" },
+    { "label": "Substack", "href": "https://byahmadfarooq.substack.com/" },
     { "label": "Book a Call", "href": "/book" }
   ],
   "footerServices": [
-    { "label": "Full-Stack Builds", "href": "/growth" },
-    { "label": "AI-Assisted Systems", "href": "/linkedin" },
-    { "label": "Product Strategy", "href": "/strategy" },
-    { "label": "Offers & Funnels", "href": "/copy-writing" }
+    { "label": "Founder LinkedIn Inbound", "href": "/#offers" },
+    { "label": "Full-Stack GTM Sprints", "href": "/#offers" },
+    { "label": "Audience & Funnel Architecture", "href": "/#offers" }
   ],
   "clients": [
     {
