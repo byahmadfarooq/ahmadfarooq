@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RommComm | Strategic Communications and Executive Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-midnight: #0B1F3A;
+      --bg-deep: #071527;
+      --bg-card: #FFFFFF;
+      --bg-cream: #F8FAFC;
+      --gold-primary: #B08A45;
+      --gold-light: #D4AF37;
+      --gold-soft: #F4EEDF;
+      --text-dark: #0F172A;
+      --text-slate: #475569;
+      --text-light: #F8FAFC;
+      --border-stone: #E2E8F0;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .top-banner {
+      background-color: var(--bg-deep);
+      color: #FAF8F5;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(176, 138, 69, 0.3);
+    }
+    .top-banner span.tag {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    header {
+      border-bottom: 1px solid var(--border-stone);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: var(--bg-midnight);
+      border: 1px solid var(--gold-primary);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(11, 31, 58, 0.15);
+    }
+    .brand-logo .monogram {
+      color: #FFFFFF;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    .brand-logo .bar {
+      width: 22px;
+      height: 2px;
+      background: var(--gold-primary);
+      margin-top: 2px;
+      border-radius: 1px;
+    }
+    .brand-text h1 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--bg-midnight);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    .brand-text span {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: block;
+      margin-top: 3px;
+    }
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .btn-gold {
+      background-color: var(--gold-primary);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 13.5px;
+      padding: 11px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(176, 138, 69, 0.4);
+      cursor: pointer;
+    }
+    .btn-gold:hover {
+      background-color: #9A7739;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(176, 138, 69, 0.25);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--bg-midnight);
+      font-weight: 600;
+      font-size: 13.5px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: 1px solid var(--border-stone);
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-outline:hover {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-stone);
+      padding: 72px 24px 80px;
+    }
+    .hero-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-soft);
+      border: 1px solid rgba(176, 138, 69, 0.3);
+      color: #8C6A2E;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .hero h2 {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--bg-midnight);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .hero h2 span.accent {
+      color: var(--gold-primary);
+      font-style: italic;
+    }
+    .hero p.lead {
+      font-size: 17px;
+      color: var(--text-slate);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+    .hero-proof-bar {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-stone);
+    }
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .proof-item strong {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--bg-midnight);
+      font-family: var(--font-serif);
+    }
+    .proof-item span {
+      font-size: 12px;
+      color: var(--text-slate);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Diagnostic Card */
+    .diagnostic-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-stone);
+      border-radius: 8px;
+      padding: 36px;
+      box-shadow: 0 12px 32px rgba(11, 31, 58, 0.08);
+      position: relative;
+    }
+    .card-badge {
+      position: absolute;
+      top: -12px;
+      right: 28px;
+      background: var(--bg-midnight);
+      color: var(--gold-light);
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 4px;
+      border: 1px solid var(--gold-primary);
+    }
+    .diagnostic-card h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--bg-midnight);
+      margin-bottom: 8px;
+    }
+    .diagnostic-card p.card-sub {
+      font-size: 13.5px;
+      color: var(--text-slate);
+      margin-bottom: 24px;
+    }
+    .diagnostic-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--border-stone);
+      border-radius: 6px;
+      background: var(--bg-cream);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .option-item:hover, .option-item.active {
+      border-color: var(--gold-primary);
+      background: var(--gold-soft);
+    }
+    .option-item input[type="radio"] {
+      margin-top: 3px;
+      accent-color: var(--gold-primary);
+    }
+    .option-item .opt-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--bg-midnight);
+      display: block;
+    }
+    .option-item .opt-desc {
+      font-size: 11.5px;
+      color: var(--text-slate);
+      display: block;
+      margin-top: 2px;
+    }
+    .diagnostic-card .btn-full {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      padding: 14px;
+      font-size: 14.5px;
+    }
+
+    /* Comparison Section */
+    .comparison-section {
+      max-width: 1180px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+    .section-header h3 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--bg-midnight);
+      margin-bottom: 14px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--text-slate);
+      line-height: 1.6;
+    }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .comp-box {
+      border-radius: 8px;
+      padding: 36px;
+      border: 1px solid var(--border-stone);
+    }
+    .comp-box.old {
+      background: #FFFFFF;
+      border-color: #E2E8F0;
+    }
+    .comp-box.new {
+      background: var(--bg-midnight);
+      color: #FFFFFF;
+      border-color: var(--gold-primary);
+      box-shadow: 0 16px 40px rgba(11, 31, 58, 0.15);
+    }
+    .comp-box h4 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .comp-box.old h4 { color: #94A3B8; }
+    .comp-box.new h4 { color: var(--gold-light); }
+    .comp-box .comp-sub {
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .comp-box.old .comp-sub { color: #64748B; }
+    .comp-box.new .comp-sub { color: #CBD5E1; }
+    .comp-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .comp-list li {
+      font-size: 13.5px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .comp-box.old .comp-list li { color: #475569; }
+    .comp-box.new .comp-list li { color: #E2E8F0; }
+    .comp-box.old .icon { color: #DC2626; font-weight: bold; }
+    .comp-box.new .icon { color: var(--gold-light); font-weight: bold; }
+
+    /* Advisory Pillars */
+    .pillars-section {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-stone);
+      border-bottom: 1px solid var(--border-stone);
+      padding: 80px 24px;
+    }
+    .pillars-container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .pillar-card {
+      padding: 32px;
+      border: 1px solid var(--border-stone);
+      border-radius: 6px;
+      background: var(--bg-cream);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-primary);
+    }
+    .pillar-num {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+    }
+    .pillar-card h4 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--bg-midnight);
+      margin-bottom: 10px;
+    }
+    .pillar-card p {
+      font-size: 13.5px;
+      color: var(--text-slate);
+      line-height: 1.6;
+    }
+
+    /* Cal Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 31, 58, 0.75);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .modal-overlay.open {
+      display: flex;
+    }
+    .modal-content {
+      background: #FFFFFF;
+      border-radius: 8px;
+      max-width: 620px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--gold-primary);
+    }
+    .modal-header {
+      background: var(--bg-midnight);
+      color: #FFFFFF;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(176, 138, 69, 0.3);
+    }
+    .modal-header h4 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--gold-light);
+    }
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: #FFFFFF;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 24px;
+    }
+    .modal-body p {
+      font-size: 14px;
+      color: var(--text-slate);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .cal-frame-container {
+      border: 1px solid var(--border-stone);
+      border-radius: 6px;
+      overflow: hidden;
+      height: 480px;
+      background: #FFFFFF;
+    }
+    .cal-frame-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-deep);
+      color: #94A3B8;
+      padding: 48px 24px;
+      font-size: 13px;
+      border-top: 1px solid rgba(176, 138, 69, 0.2);
+    }
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-inner a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-container { grid-template-columns: 1fr; gap: 40px; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner: Executive Concept Notice -->
+  <div class="top-banner">
+    <div>
+      <span class="tag">Confidential Concept Preview</span>: Prepared exclusively for <strong>Richard Romm</strong> (RommComm)
+    </div>
+    <div>
+      Cross-Border Reputation Counsel: London | New York | Dubai
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-logo">
+          <div class="monogram">RC</div>
+          <div class="bar"></div>
+        </div>
+        <div class="brand-text">
+          <h1>RommComm</h1>
+          <span>Strategic Communications & Advisory</span>
+        </div>
+      </a>
+
+      <div class="header-cta">
+        <button class="btn-outline" onclick="openCalModal()">Our Approach</button>
+        <button class="btn-gold" onclick="openCalModal()">
+          Schedule Executive Briefing
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-pill">Executive Reputation Architecture</div>
+        <h2>Cross-Border Counsel for <span class="accent">High-Stakes</span> Sovereign & Corporate Decisions</h2>
+        <p class="lead">
+          Strategic communications, crisis counsel, and narrative governance for global corporations, sovereign institutions, and founder-led organizations operating across the UK, US, and Gulf markets.
+        </p>
+
+        <div class="hero-proof-bar">
+          <div class="proof-item">
+            <strong>UK | US | Gulf</strong>
+            <span>Active Jurisdictions</span>
+          </div>
+          <div class="proof-item">
+            <strong>Tier-1 Media</strong>
+            <span>FT, WSJ, Bloomberg, Reuters</span>
+          </div>
+          <div class="proof-item">
+            <strong>Zero Friction</strong>
+            <span>Direct Principal Access</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Diagnostic Card -->
+      <div class="diagnostic-card">
+        <div class="card-badge">Direct Calendar Access</div>
+        <h3>Select Your Advisory Briefing</h3>
+        <p class="card-sub">Choose a focus area below to unlock an immediate 15-minute diagnostic consultation with Richard Romm.</p>
+
+        <div class="diagnostic-options">
+          <label class="option-item active" onclick="selectOption(this)">
+            <input type="radio" name="track" checked />
+            <div>
+              <span class="opt-title">1. Crisis & Special Situations Advisory</span>
+              <span class="opt-desc">Rapid-response narrative control, regulatory investigations, and stakeholder defense.</span>
+            </div>
+          </label>
+
+          <label class="option-item" onclick="selectOption(this)">
+            <input type="radio" name="track" />
+            <div>
+              <span class="opt-title">2. Cross-Border Reputation & Market Entry</span>
+              <span class="opt-desc">Establishing institutional authority across London, Washington, and GCC financial hubs.</span>
+            </div>
+          </label>
+
+          <label class="option-item" onclick="selectOption(this)">
+            <input type="radio" name="track" />
+            <div>
+              <span class="opt-title">3. Founder-Led Leadership & Media Positioning</span>
+              <span class="opt-desc">Executive profile positioning, keynote authority, and tier-1 publication placement.</span>
+            </div>
+          </label>
+        </div>
+
+        <button class="btn-gold btn-full" onclick="openCalModal()">
+          Lock In 15-Minute Briefing Slot
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section: Why We Rearchitected RommComm -->
+  <section class="comparison-section">
+    <div class="section-header">
+      <h3>Why We Re-Architected RommComm's Conversion Flow</h3>
+      <p>
+        Boutique executive advisory firms lose over 80% of high-net-worth and institutional referrals due to passive contact forms. Here is how this sprint transforms your digital acquisition:
+      </p>
+    </div>
+
+    <div class="comparison-grid">
+      <div class="comp-box old">
+        <h4>The Traditional Advisory Bottleneck</h4>
+        <div class="comp-sub">What happens on most boutique consultancy websites today:</div>
+        <ul class="comp-list">
+          <li><span class="icon">x</span> Prospects encounter a generic "Get In Touch" web form with no direct booking option.</li>
+          <li><span class="icon">x</span> High-level corporate decision-makers drop off rather than typing into a blind email submission box.</li>
+          <li><span class="icon">x</span> Days of email ping-pong are required just to align calendar schedules between busy executive assistants.</li>
+          <li><span class="icon">x</span> Zero above-the-fold engagement causes referrals to bounce back to LinkedIn or competitors.</li>
+        </ul>
+      </div>
+
+      <div class="comp-box new">
+        <h4>The RommComm Diagnostic Engine</h4>
+        <div class="comp-sub">The streamlined conversion flow built in this prototype:</div>
+        <ul class="comp-list">
+          <li><span class="icon">+</span> 1-Click diagnostic selector above the fold lets institutional clients pick their immediate advisory track.</li>
+          <li><span class="icon">+</span> Direct calendar integration locks confidential 15-minute briefings instantly onto your schedule.</li>
+          <li><span class="icon">+</span> Pre-qualified briefing questions filter for client scale, budget capacity, and urgency before the call.</li>
+          <li><span class="icon">+</span> Institutional-grade British luxury aesthetics reinforce sovereign authority and trust from the first second.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisory Pillars Section -->
+  <section class="pillars-section">
+    <div class="pillars-container">
+      <div class="section-header">
+        <h3>Core Advisory Practice Areas</h3>
+        <p>Tailored counsel delivered at the intersection of reputation, media, and geopolitical influence.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <h4>Crisis & High-Stakes Defense</h4>
+          <p>Confidential mitigation strategies for activist campaigns, regulatory scrutiny, litigation support, and leadership transitions across international jurisdictions.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <h4>Sovereign & Cross-Border Mandates</h4>
+          <p>Guiding international entities, family offices, and sovereign funds expanding their footprint across the City of London, North America, and the United Arab Emirates.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <h4>Executive Narrative & Influence</h4>
+          <p>Architecting long-term thought leadership, boardroom communication strategy, and strategic media placements that protect enterprise valuation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cal.com Booking Modal -->
+  <div class="modal-overlay" id="calModal" onclick="closeOnOverlay(event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Schedule Confidential Executive Briefing</h4>
+        <button class="modal-close" onclick="closeCalModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Select a 15-minute diagnostic time slot below. We will review your current positioning and outline an immediate roadmap for your advisory practice.</p>
+        <div class="cal-frame-container">
+          <iframe src="https://cal.com/ahmad-farooq-tuwcnw/30min?embed=true" title="Cal.com Booking"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>RommComm Advisory</strong> | Strategic Communications & Sovereign Counsel (London, New York, Dubai)
+      </div>
+      <div>
+        Interactive Prototype Built by <a href="https://ahmadfarooq.vercel.app" target="_blank">Kaivex</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function selectOption(element) {
+      document.querySelectorAll('.option-item').forEach(el => el.classList.remove('active'));
+      element.classList.add('active');
+      const radio = element.querySelector('input[type="radio"]');
+      if (radio) radio.checked = true;
+    }
+
+    function openCalModal() {
+      document.getElementById('calModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCalModal() {
+      document.getElementById('calModal').classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeOnOverlay(e) {
+      if (e.target.id === 'calModal') {
+        closeCalModal();
+      }
+    }
+  </script>
+</body>
+</html>
