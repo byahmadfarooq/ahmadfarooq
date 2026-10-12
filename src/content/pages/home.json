@@ -1,67 +1,12 @@
 {
-  "heroLabel": "Full-Stack Builder & Strategist",
-  "heroTitle": "Strategy that ships.\nSystems that sell.",
-  "heroTagline": "Most agencies hire a strategist who can't build, and a developer who can't sell. I bridge the gap: high-converting digital funnels and the executive LinkedIn content that feeds them.",
-  "heroCTA1Text": "Book a Strategy Call",
-  "heroCTA2Text": "Explore Work & Teardowns",
-  "servicesHeadline": "Explicit Offerings.\nStrategy Meets the Build.",
-  "casesHeadline": "Real Strategy. Real Code. Real Scale.",
-  "skillsHeadline": "The Builder-Strategist Stack.",
-  "ctaHeadline": "Ready to build an inbound engine\nthat compounds?",
-  "ctaSubtext": "30 minutes. No pitch. Just real positioning, funnel review, and clear next steps.",
-  "services": [
-    {
-      "badge": "Monthly Retainer",
-      "title": "Founder Authority & LinkedIn Inbound",
-      "description": "Turn your personal LinkedIn into a qualified inbound pipeline without spending hours writing every week.",
-      "deliverables": [
-        "3–4 High-impact weekly posts & document carousels",
-        "Executive profile repositioned as an inbound funnel",
-        "Comment-to-DM lead magnets & outbound conversation triggers",
-        "Weekly pipeline tracking, audience growth & iteration"
-      ],
-      "scope": "Ongoing Monthly Partnership",
-      "cta": "Book Authority Call →"
-    },
-    {
-      "badge": "14–21 Day Sprint",
-      "title": "Full-Stack GTM & Funnel Sprint",
-      "description": "Turn your offer into a live, high-converting digital system engineered from interface to database.",
-      "deliverables": [
-        "Positioning, ICP definition & messaging architecture",
-        "Custom high-converting landing page (React/modern web)",
-        "Automated qualification & Cal.com scheduling workflow",
-        "CRM & lead routing with zero third-party bloat"
-      ],
-      "scope": "Fixed-Scope Sprint (14–21 Days)",
-      "cta": "Book Funnel Sprint →"
-    },
-    {
-      "badge": "Full Partnership",
-      "title": "The Complete Inbound Engine",
-      "description": "The complete loop: I build the conversion machine in Month 1 and run the distribution every week thereafter.",
-      "deliverables": [
-        "Full Funnel Sprint build (Landing page + booking + CRM)",
-        "3-Month executive LinkedIn ghostwriting & distribution",
-        "Continuous conversion rate optimization & split-testing",
-        "Single point of contact: the builder and strategist in one"
-      ],
-      "scope": "Sprint Build + 3-Month Retainer",
-      "cta": "Book Complete Partnership →"
-    }
-  ],
-  "skills": [
-    { "name": "LinkedIn Ghostwriting" },
-    { "name": "GTM & Positioning" },
-    { "name": "Funnel Architecture" },
-    { "name": "React & Supabase" },
-    { "name": "Full-Stack SaaS" },
-    { "name": "Content Systems" },
-    { "name": "Conversion Copywriting" },
-    { "name": "Offer Design" },
-    { "name": "Automated Booking (Cal.com)" },
-    { "name": "Vercel & Next/Astro" },
-    { "name": "Audience Recovery" },
-    { "name": "AI-Assisted Systems" }
-  ]
+  "heroLabel": "LinkedIn Growth & Content Systems",
+  "heroTitle": "I help coaches and solo consultants get clients from LinkedIn.",
+  "heroTagline": "I write your daily posts, leave targeted comments, and send connection requests Monday to Friday. No fluff. Just steady organic reach and qualified conversations.",
+  "heroCTA1Text": "Book a 15-minute call",
+  "servicesHeadline": "What I offer.\nSimple, honest pricing.",
+  "casesHeadline": "Real numbers.\nProof I can back.",
+  "buildsHeadline": "Live builds.\nThings I made that you can click.",
+  "aboutHeadline": "About me.\nA builder who writes.",
+  "ctaHeadline": "Ready to get clients from LinkedIn\nwithout writing every day?",
+  "ctaSubtext": "15 minutes. No pitch. Just a clear look at your profile and a plan to fix it."
 }
