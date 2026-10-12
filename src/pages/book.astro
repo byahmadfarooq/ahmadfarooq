@@ -8,8 +8,8 @@ const numColors: Record<string, string> = { '01': 'var(--lime)', '02': 'var(--or
 ---
 
 <BaseLayout
-  title="Start a Project | Ahmad Farooq"
-  description="Talk with Ahmad Farooq about your product, workflow, offer, or funnel and find the clearest next step."
+  title="Book a 15-Minute Call | Ahmad Farooq"
+  description="Schedule a focused 15-minute diagnostic call with Ahmad Farooq to review your LinkedIn positioning and client pipeline."
   canonicalPath="/book"
 >
   <Header />
@@ -18,7 +18,7 @@ const numColors: Record<string, string> = { '01': 'var(--lime)', '02': 'var(--or
 
     <section class="page-hero" aria-label="Page introduction">
       <div class="page-hero-inner">
-        <span class="page-hero-label">Project Call</span>
+        <span class="page-hero-label">Growth Call</span>
         <h1 class="page-hero-title">{book.heroTitle}</h1>
         <p class="page-hero-desc">{book.heroDesc}</p>
       </div>
@@ -48,11 +48,11 @@ const numColors: Record<string, string> = { '01': 'var(--lime)', '02': 'var(--or
             <div style="display: flex; flex-direction: column; gap: 16px;">
               <div style="display: flex; gap: 12px; align-items: flex-start;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <div><strong style="display: block; font-size: 0.9rem;">30 minutes</strong><p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Calendar invite sent automatically</p></div>
+                <div><strong style="display: block; font-size: 0.9rem;">15 minutes</strong><p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Calendar invite sent automatically</p></div>
               </div>
               <div style="display: flex; gap: 12px; align-items: flex-start;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                <div><strong style="display: block; font-size: 0.9rem;">Video call</strong><p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Google Meet or Zoom, your choice</p></div>
+                <div><strong style="display: block; font-size: 0.9rem;">Video call</strong><p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Google Meet video link included</p></div>
               </div>
               <div style="display: flex; gap: 12px; align-items: flex-start;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -60,13 +60,13 @@ const numColors: Record<string, string> = { '01': 'var(--lime)', '02': 'var(--or
               </div>
               <div style="display: flex; gap: 12px; align-items: flex-start;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                <div><strong style="display: block; font-size: 0.9rem;">Zero cost</strong><p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">No catch. No follow-up spam.</p></div>
+                <div><strong style="display: block; font-size: 0.9rem;">Zero cost</strong><p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">No sales pitch. Pure diagnostic.</p></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cal Embed with Generous Spacing -->
+        <!-- Cal Embed with 15min Event Link -->
         <div class="reveal" style="margin-top: 72px; padding-top: 56px; border-top: 2px solid var(--border);">
           <div style="text-align: center; margin-bottom: 32px;">
             <span style="font-family: var(--font-heading); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); background: rgba(255,103,0,0.08); border: 1.5px solid var(--orange); display: inline-block; padding: 4px 14px; margin-bottom: 12px;">Live Schedule</span>
@@ -75,20 +75,20 @@ const numColors: Record<string, string> = { '01': 'var(--lime)', '02': 'var(--or
           </div>
 
           <div class="cal-embed-wrap" style="background: var(--white); border: 2px solid var(--border); box-shadow: 8px 8px 0 var(--border); padding: 12px; min-height: 650px;">
-            <div style="width:100%;height:100%;min-height:600px;overflow:scroll" id="my-cal-inline-30min"></div>
+            <div style="width:100%;height:100%;min-height:600px;overflow:scroll" id="my-cal-inline-15min"></div>
             <script type="text/javascript">
               (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-              Cal("init", "30min", {origin:"https://app.cal.com"});
+              Cal("init", "15min", {origin:"https://app.cal.com"});
               Cal.config = Cal.config || {};
               Cal.config.forwardQueryParams = true;
 
-              Cal.ns["30min"]("inline", {
-                elementOrSelector:"#my-cal-inline-30min",
+              Cal.ns["15min"]("inline", {
+                elementOrSelector:"#my-cal-inline-15min",
                 config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-                calLink: "ahmad-farooq-tuwcnw/30min",
+                calLink: "ahmad-farooq-tuwcnw/15min",
               });
 
-              Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+              Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
             </script>
           </div>
         </div>
