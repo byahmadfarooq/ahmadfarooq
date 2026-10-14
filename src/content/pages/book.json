@@ -1,21 +1,21 @@
 {
-  "heroTitle": "Let's talk about the build.",
-  "heroDesc": "30 minutes to unpack the product, workflow, offer, or funnel you want to improve—and identify the clearest next move.",
+  "heroTitle": "Book a 15-Minute Strategy Call.",
+  "heroDesc": "15 minutes to review your LinkedIn positioning, audience strategy, and growth bottlenecks with no pressure or sales pitch.",
   "expectations": [
     {
       "num": "01",
       "title": "You talk, I listen",
-      "body": "Tell me what you want to build, what already exists, and where the project or business is getting stuck."
+      "body": "Tell me about your current offer, who you help, and where your inbound growth is currently stuck."
     },
     {
       "num": "02",
-      "title": "We find the real scope",
-      "body": "We'll separate the useful first version from the nice-to-haves and connect the build to the business outcome."
+      "title": "We analyze your profile & strategy",
+      "body": "We review your headline, about section, and content cadence to pinpoint immediate conversion leaks."
     },
     {
       "num": "03",
       "title": "You leave with clarity",
-      "body": "Whether we work together or not, you'll leave with a clearer product, system, or funnel direction."
+      "body": "Whether we partner together or not, you will leave with an actionable roadmap to fix your LinkedIn pipeline."
     }
   ]
 }

@@ -4,475 +4,361 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTABand from '../components/CTABand.astro';
 import ClientsGrid from '../components/ClientsGrid.astro';
-import settings from '../content/global/settings.json';
 import home from '../content/pages/home.json';
-
-const serviceIcons: Record<string, string> = {
-  'Founder Authority & LinkedIn Inbound': `<rect x="3" y="3" width="22" height="16" rx="2"/><path d="M9 25h10M14 19v6"/><circle cx="9" cy="11" r="2"/><path d="M14 11h7M14 14h5"/>`,
-  'Full-Stack GTM & Funnel Sprints': `<polyline points="2,22 8,14 14,18 20,8 26,4"/><circle cx="26" cy="4" r="2" fill="currentColor" stroke="none"/>`,
-  'Growth Architecture & Strategy': `<circle cx="14" cy="14" r="11"/><circle cx="14" cy="14" r="4"/><line x1="14" y1="3" x2="14" y2="10"/><line x1="14" y1="18" x2="14" y2="25"/><line x1="3" y1="14" x2="10" y2="14"/><line x1="18" y1="14" x2="25" y2="14"/>`,
-};
 ---
 
 <BaseLayout
-  title="Ahmad Farooq | Full-Stack Builder & Strategist"
-  description="Ahmad Farooq builds full-stack products, AI-assisted systems, and conversion funnels with React, Supabase, and sharp business strategy."
+  title="Ahmad Farooq | LinkedIn Growth for Coaches & Consultants"
+  description="I help coaches and solo consultants turn LinkedIn into a predictable client pipeline through daily content, targeted outreach, and complete profile rewrites."
   canonicalPath="/"
 >
   <Header />
 
   <main>
 
-    <!-- HERO -->
-    <section aria-label="Introduction">
+    <!-- 1. HERO -->
+    <section aria-label="Introduction" class="section" style="padding-top: 60px; padding-bottom: 50px;">
       <div class="hero-wrap">
         <div class="hero-content">
           <span class="hero-label">{home.heroLabel}</span>
-          <h1 class="hero-title" set:html={home.heroTitle.replace(/\n/g, '<br>')}></h1>
-          <p class="hero-tagline">{home.heroTagline}</p>
+          <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 2.85rem); line-height: 1.18; margin: 12px 0 16px 0;">{home.heroTitle}</h1>
+          <p class="hero-tagline" style="font-size: 1.05rem; line-height: 1.6; max-width: 580px; margin-bottom: 28px;">{home.heroTagline}</p>
 
-          <div class="hero-actions">
+          <div class="hero-actions" style="margin-bottom: 0;">
             <a href="/book" class="btn btn-primary">{home.heroCTA1Text}</a>
-            <a href="#projects" class="btn btn-secondary">{home.heroCTA2Text}</a>
-          </div>
-
-          <div class="hero-metrics">
-            <div>
-              <span class="hero-metric-num">10×</span>
-              <span class="hero-metric-label">LinkedIn Growth (Coin Bureau)</span>
-            </div>
-            <div>
-              <span class="hero-metric-num">$300K</span>
-              <span class="hero-metric-label">Pipeline from Authority</span>
-            </div>
-            <div>
-              <span class="hero-metric-num">&lt;24h</span>
-              <span class="hero-metric-label">Idea to Working SaaS</span>
-            </div>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="profile-frame">
-            <img src="/images/ahmad-profile.png" alt="Ahmad Farooq, Full-Stack Builder and Strategist" width="340" height="440" loading="eager">
+            <img src="/images/ahmad-profile.png" alt="Ahmad Farooq, LinkedIn Growth Specialist and Builder" width="340" height="440" loading="eager">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES / OFFERS GRID -->
-    <section id="offers" class="section" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">What I Deliver</span>
-          <h2 id="services-heading" set:html={home.servicesHeadline.replace(/\n/g, '<br>')}></h2>
-        </div>
-
-        <div class="services-grid">
-          {home.services.map((service: any) => (
-            <article class="service-card reveal">
-              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
-                <div class="service-icon" aria-hidden="true">
-                  <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <Fragment set:html={serviceIcons[service.title] || ''} />
-                  </svg>
-                </div>
-                <span class="tag tag-orange" style="font-size: 0.68rem;">{service.badge}</span>
-              </div>
-              <h3 style="margin-top: 8px; font-size: 1.22rem; line-height: 1.3;">{service.title}</h3>
-              <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.5;">{service.description}</p>
-              
-              <div style="margin: 8px 0; border-top: 1px solid var(--border); padding-top: 14px;">
-                <p style="font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px;">Deliverables:</p>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; margin: 0;">
-                  {service.deliverables.map((item: string) => (
-                    <li style="font-size: 0.84rem; display: flex; gap: 8px; align-items: flex-start; line-height: 1.35;">
-                      <span style="color: var(--orange); font-weight: 800; line-height: 1;">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(0,0,0,0.15); display: flex; flex-direction: column; gap: 10px;">
-                <span style="font-size: 0.76rem; font-family: var(--font-heading); font-weight: 600; color: var(--text-muted);">{service.scope}</span>
-                <a href="/book" class="btn btn-primary btn-sm" style="justify-content: center; text-align: center; width: 100%;">
-                  {service.cta}
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES & TEARDOWNS -->
-    <section id="projects" class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="cases-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Selected Work &amp; Teardowns</span>
-          <h2 id="cases-heading" set:html={home.casesHeadline.replace(/\n/g, '<br>')}></h2>
-        </div>
-
-        <div class="case-studies-list">
-          <!-- 1. Coin Bureau -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Coin Bureau</span>
-                <span class="case-study-title">10× LinkedIn Growth for Crypto's Biggest Media Brand (2M+ Audience)</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Challenge</h4>
-                  <p>Coin Bureau had massive YouTube and newsletter audiences but a dormant LinkedIn presence. They needed a systematic approach to content distribution that would drive high-value newsletter subscribers from an institutional professional audience without alienating their crypto-native following.</p>
-                  <br>
-                  <h4>The Approach</h4>
-                  <p>Built a full 90-day LinkedIn content and growth system repurposing deep-dive YouTube research into executive-friendly formats. Defined strict audience tiers, hook frameworks, and a testing sprint across content types that converted professional viewers into recurring readers.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Results</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">10×</span>
-                      <span class="outcome-label">LinkedIn following in 6 months</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">30%</span>
-                      <span class="outcome-label">Of newsletter subs from LinkedIn</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">4.2×</span>
-                      <span class="outcome-label">Average engagement rate vs industry</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2. EdTech Founder -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Series A EdTech Founder</span>
-                <span class="case-study-title">0 to Authority: Building a $300K Pipeline from LinkedIn</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Challenge</h4>
-                  <p>A Series A EdTech founder had strong product-market fit but zero personal brand presence. Inbound enterprise leads were stagnant and they relied entirely on outbound SDR cold emails burning through capital.</p>
-                  <br>
-                  <h4>The Approach</h4>
-                  <p>Repositioned the founder from "CEO of EdTech startup" to "the category leader of corporate learning". Built a 5-pillar thought leadership architecture, optimized the full LinkedIn profile into an inbound landing page, and established a 3× per week posting cadence with comment-to-DM lead magnets.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Results</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">12K</span>
-                      <span class="outcome-label">Followers in 90 days (from 300)</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">$300K</span>
-                      <span class="outcome-label">Pipeline attributed to LinkedIn</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">3</span>
-                      <span class="outcome-label">Inbound enterprise deals closed</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. Zara Shafiq Khan -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Zara Shafiq Khan</span>
-                <span class="case-study-title">Audience Recovery: 4-Pillar Content Reset for 700k+ Followers</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Challenge</h4>
-                  <p>A major personal brand with over 700,000 followers had stalled in growth and experienced declining engagement due to format fatigue and uncalibrated posting styles.</p>
-                  <br>
-                  <h4>The Approach</h4>
-                  <p>Diagnosed algorithmic and psychological dropoffs. Engineered a strict 4-pillar content framework (Relatable, Educational, Aspirational, Entertainment), restructured hook velocity, and implemented structured engagement recovery tactics.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Results</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">700K+</span>
-                      <span class="outcome-label">Audience diagnosed and reset</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">4-Pillar</span>
-                      <span class="outcome-label">Content framework deployed</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">Immediate</span>
-                      <span class="outcome-label">Engagement &amp; reach recovery</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. Bitward -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Bitward</span>
-                <span class="case-study-title">Funnel Architecture: Multi-Platform Webinar &amp; Telegram Conversion</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Challenge</h4>
-                  <p>Bitward needed an organic acquisition and onboarding funnel to convert social media attention into active investors and fund participants without burning budget on cold paid ads.</p>
-                  <br>
-                  <h4>The Approach</h4>
-                  <p>Designed a connected funnel system: organic multi-channel content driving to high-signal Telegram community and newsletter capture, automated webinar onboarding, and friction-free fund conversion at the webinar finish line.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Results</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">Full</span>
-                      <span class="outcome-label">Content-to-fund conversion flow</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">2-Stage</span>
-                      <span class="outcome-label">Telegram &amp; newsletter capture</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">High</span>
-                      <span class="outcome-label">Qualified lead-to-call rate</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5. ARKA SaaS -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">ARKA</span>
-                <span class="case-study-title">SaaS Brand Command Center (Built Solo in &lt;24 Hours)</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Build</h4>
-                  <p>A full brand operating system for LinkedIn creators, consultants, and agencies. Replaces 4–5 disjointed SaaS tools into one unified command center.</p>
-                  <br>
-                  <h4>Stack &amp; Scope</h4>
-                  <p>Built solo in under 24 hours with React, Supabase, and Vercel. Features live database connections, MRR tracking, Kanban workflow, content calendar, 7-stage outbound pipeline, inbound CRM, and analytics.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Highlights</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">&lt;24h</span>
-                      <span class="outcome-label">From idea to working SaaS</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">7-Stage</span>
-                      <span class="outcome-label">Integrated outbound pipeline</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">Solo</span>
-                      <span class="outcome-label">Strategy, database, and UI</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6. Unilimo -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Unilimo</span>
-                <span class="case-study-title">Luxury Transport Platform &amp; Live Booking Engine</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Build</h4>
-                  <p>A polished, high-converting digital platform for a New York luxury limousine service, built to move high-net-worth clients from service discovery to quote and booking without friction.</p>
-                  <br>
-                  <h4>Stack &amp; Scope</h4>
-                  <p>Designed and built with dark luxury aesthetics, fleet showcase gallery, live dynamic rate cards by airport/city, and a custom built-in quote-request system deployed on Vercel.</p>
-                  <p style="margin-top:16px;"><a href="https://unilimo.vercel.app/" target="_blank" rel="noopener noreferrer" class="service-link">View live project →</a></p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Highlights</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">100%</span>
-                      <span class="outcome-label">Custom luxury visual architecture</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">Custom</span>
-                      <span class="outcome-label">Quote &amp; rate card engine</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">Live</span>
-                      <span class="outcome-label">Production deployment</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 7. Zedsource -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Zedsource</span>
-                <span class="case-study-title">Complete Brand Identity &amp; Positioning for Digital-First Staffing</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Challenge</h4>
-                  <p>Zedsource launched in a commoditised staffing market with no visual identity, no positioning, and no brand system. Every competitor looked identical: generic blue logos and corporate stock photography.</p>
-                  <br>
-                  <h4>The Approach</h4>
-                  <p>Led a brand strategy sprint to define the positioning: "digital-first, founder-focused staffing." Designed a complete visual identity: logo, colour system, typography, and digital asset library.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Results</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">100%</span>
-                      <span class="outcome-label">Brand built from zero in 3 weeks</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">60%</span>
-                      <span class="outcome-label">Reduction in CAC post launch</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">5×</span>
-                      <span class="outcome-label">Profile visits after rebrand</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 8. Etimad Foundation -->
-          <div class="case-study reveal">
-            <div class="case-study-header" role="button" tabindex="0" aria-expanded="false">
-              <div class="case-study-header-left">
-                <span class="case-study-client">Etimad Foundation</span>
-                <span class="case-study-title">Bilingual Ramadan Charity &amp; Donation Platform</span>
-              </div>
-              <div class="case-study-toggle" aria-hidden="true">+</div>
-            </div>
-            <div class="case-study-body" role="region">
-              <div class="case-study-content">
-                <div class="case-study-detail">
-                  <h4>The Build</h4>
-                  <p>A multi-page NGO platform built pro bono for a nationwide Ramadan food drive, designed to make contributions seamless in both Urdu and English.</p>
-                  <br>
-                  <h4>Stack &amp; Scope</h4>
-                  <p>Mobile-first architecture with Easypaisa and Jazzcash payment integration, donor tracking, volunteer registration workflows, and full bilingual localization.</p>
-                </div>
-                <div class="case-study-detail">
-                  <h4>Highlights</h4>
-                  <div class="case-study-outcomes">
-                    <div class="outcome-item">
-                      <span class="outcome-num">2</span>
-                      <span class="outcome-label">Languages (English &amp; Urdu)</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">End-to-end</span>
-                      <span class="outcome-label">Mobile payment integration</span>
-                    </div>
-                    <div class="outcome-item">
-                      <span class="outcome-num">100%</span>
-                      <span class="outcome-label">Pro bono community initiative</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SELECTED CLIENTS -->
+    <!-- WORKED WITH -->
     <ClientsGrid />
 
-    <!-- SUBSTACK DISPATCH -->
-    <section id="dispatch" class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="dispatch-heading">
-      <div class="container" style="max-width: 760px; text-align: center;">
-        <div class="section-header reveal" style="text-align: center;">
-          <span class="section-label">Weekly Newsletter</span>
-          <h2 id="dispatch-heading">The Builder-Strategist Dispatch.</h2>
-          <p style="margin-top: 16px; font-size: 1.05rem; color: var(--text-muted); line-height: 1.6;">
-            Every week, I break down one real GTM system, founder LinkedIn framework, or full-stack automation. No corporate fluff. Just actionable blueprints.
-          </p>
-        </div>
-
-        <div class="reveal" style="margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-          <a href="https://byahmadfarooq.substack.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1rem; padding: 14px 28px;">
-            Read &amp; Subscribe on Substack →
-          </a>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
-            Free weekly breakdowns read by founders, operators, and builders.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS TOOLKIT -->
-    <section class="section" style="border-bottom: 2px solid var(--border);" aria-labelledby="skills-heading">
+    <!-- 2. PROOF (CASE STUDIES) -->
+    <section id="work" class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="cases-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Skills Toolkit</span>
-          <h2 id="skills-heading">{home.skillsHeadline}</h2>
+          <span class="section-label">Case Studies</span>
+          <h2 id="cases-heading" set:html={home.casesHeadline.replace(/\n/g, '<br>')}></h2>
+          <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-muted);">
+            Real performance analytics and commercial outcomes from client engagements. Names and faces anonymised for privacy.
+          </p>
         </div>
-        <div class="skills-grid">
-          {home.skills.map(skill => (
-            <div class="skill-item reveal"><span class="skill-dot"></span>{skill.name}</div>
-          ))}
+
+        <div class="case-studies-list" style="display: flex; flex-direction: column; gap: 40px;">
+          
+          <!-- Case Study 1: Wellness Coach -->
+          <article class="case-study-card reveal" style="background: var(--bg); border: 2px solid var(--border); border-radius: 8px; padding: clamp(20px, 3vw, 32px); box-shadow: 4px 4px 0 var(--border);">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+              <div>
+                <span class="tag tag-orange" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Case Study 1</span>
+                <h3 style="font-size: 1.4rem; margin-top: 8px;">Wellness Coach: 101,050 Impressions &amp; 19 New Clients</h3>
+              </div>
+              <span style="font-size: 0.82rem; font-family: var(--font-heading); color: var(--text-muted); font-weight: 600;">May to August 2024</span>
+            </div>
+
+            <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text); margin-bottom: 18px;">
+              <strong>Scope &amp; Strategy:</strong> Executed an end-to-end profile rewrite and done-for-you growth system. Repositioned the profile to speak directly to ideal buyers, authored daily thought leadership posts, conducted 20 to 25 strategic daily comments on peer and prospect discussions, and sent 10 to 15 targeted connection touches per day.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin-bottom: 24px;">
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--orange);">101,050</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Impressions (90 Days)</div>
+              </div>
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text);">19 Clients</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">New Clients Acquired</div>
+              </div>
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text);">+3%</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Amazon Book Sales Lift</div>
+              </div>
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text);">Done-for-you</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Daily Mon–Fri System</div>
+              </div>
+            </div>
+
+            <!-- Visual Gallery for Case 1 -->
+            <div style="margin-top: 20px;">
+              <p style="font-family: var(--font-heading); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px;">Verified Analytics &amp; Profile Redesigns (Anonymised for Privacy):</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px;">
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-1/Portfolio Profile 1 (1).png" alt="Wellness coach LinkedIn 90-day impressions report displaying 101,050 impressions" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-1/Portfolio Profile 1 (2).png" alt="Audience engagement and impression metrics chart" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-1/Portfolio Profile 1 (3).png" alt="Profile banner before and after optimization with identity details blurred" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-1/Portfolio Profile 1 (4).png" alt="Headline and about section positioning rewrite with identity details blurred" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Case Study 2: EdTech / SaaS Founder -->
+          <article class="case-study-card reveal" style="background: var(--bg); border: 2px solid var(--border); border-radius: 8px; padding: clamp(20px, 3vw, 32px); box-shadow: 4px 4px 0 var(--border);">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+              <div>
+                <span class="tag tag-orange" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Case Study 2</span>
+                <h3 style="font-size: 1.4rem; margin-top: 8px;">EdTech Founder: 3 Investor Meetings &amp; Event Invitations</h3>
+              </div>
+              <span style="font-size: 0.82rem; font-family: var(--font-heading); color: var(--text-muted); font-weight: 600;">July 2024</span>
+            </div>
+
+            <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text); margin-bottom: 18px;">
+              <strong>Scope &amp; Strategy:</strong> Built an executive founder presence from a brand-new profile with zero initial connections. Engineered storytelling frameworks addressing core industry problems, combined with targeted outbound connection requests to corporate buyers and seed investors. Generated invitations to prominent EdTech industry events and booked 3 direct investor meetings within the initial rollout.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin-bottom: 24px;">
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--orange);">3 Meetings</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Investor Meetings Booked</div>
+              </div>
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text);">Industry Invites</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Invited to EdTech Events</div>
+              </div>
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text);">3,346</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Impressions in 28 Days</div>
+              </div>
+              <div style="background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;">
+                <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text);">0 Base</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Brand New Account</div>
+              </div>
+            </div>
+
+            <!-- Visual Gallery for Case 2 -->
+            <div style="margin-top: 20px;">
+              <p style="font-family: var(--font-heading); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px;">Verified Monthly Analytics Report (July 2024):</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px;">
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-2/Portfolio Profile 2 (1).png" alt="Founder LinkedIn performance report showing 3,346 impressions" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-2/Portfolio Profile 2 (2).png" alt="Content impression breakdown and individual post stats" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff;">
+                  <img src="/images/case-2/Portfolio Profile 2 (3).png" alt="Targeted connection outreach breakdown" loading="lazy" style="width: 100%; height: auto; display: block;">
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <CTABand heading={home.ctaHeadline} subtext={home.ctaSubtext} />
+    <!-- 3. BUILDS (LIVE DEMOS) -->
+    <section id="builds" class="section" aria-labelledby="builds-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Engineering</span>
+          <h2 id="builds-heading" set:html={home.buildsHeadline.replace(/\n/g, '<br>')}></h2>
+          <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-muted);">
+            Production digital systems built, deployed, and live on the web.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 820px; margin: 0 auto;">
+          
+          <div class="reveal" style="background: var(--bg-dark); border: 2px solid var(--border); border-radius: 8px; padding: 24px; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 style="font-size: 1.25rem; margin: 0;">Unilimo</h3>
+              <span class="tag tag-orange" style="font-size: 0.7rem;">Production Web App</span>
+            </div>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-light); margin-bottom: 18px; flex-grow: 1;">
+              Luxury transport booking platform with dynamic airport rates and a live quote engine deployed on Vercel.
+            </p>
+            <div style="border-top: 1px solid var(--border); padding-top: 14px;">
+              <a href="https://unilimo.vercel.app/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 700; color: var(--orange); text-decoration: underline;">
+                Visit unilimo.vercel.app →
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal" style="background: var(--bg-dark); border: 2px solid var(--border); border-radius: 8px; padding: 24px; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 style="font-size: 1.25rem; margin: 0;">Etimad Foundation</h3>
+              <span class="tag tag-orange" style="font-size: 0.7rem;">Pro Bono Platform</span>
+            </div>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-light); margin-bottom: 18px; flex-grow: 1;">
+              A bilingual Ramadan donation platform with integrated mobile wallet payment flows and volunteer coordination.
+            </p>
+            <div style="border-top: 1px solid var(--border); padding-top: 14px;">
+              <a href="https://etimadfoundation.vercel.app/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 700; color: var(--orange); text-decoration: underline;">
+                Visit etimadfoundation.vercel.app →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHAT I OFFER -->
+    <section id="offer" class="section" style="background: var(--bg-dark); border-top: 2px solid var(--border); border-bottom: 2px solid var(--border);" aria-labelledby="offer-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Pricing &amp; Scope</span>
+          <h2 id="offer-heading" set:html={home.servicesHeadline.replace(/\n/g, '<br>')}></h2>
+          <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-muted);">
+            Clear deliverables and honest pricing. No lock-in contracts.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
+          
+          <!-- Offer A: Profile Rewrite -->
+          <article class="reveal" style="background: var(--bg); border: 2px solid var(--border); border-radius: 8px; padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; box-shadow: 4px 4px 0 var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+              <span class="tag tag-orange" style="font-size: 0.72rem;">One-Time Sprint</span>
+              <div style="text-align: right;">
+                <span style="font-size: 1.75rem; font-weight: 800; font-family: var(--font-heading); color: var(--orange);">$200</span>
+                <span style="display: block; font-size: 0.72rem; color: var(--text-muted);">$150 with retainer</span>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.35rem; margin-bottom: 10px;">LinkedIn Profile Rewrite</h3>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-light); margin-bottom: 20px;">
+              Turn your personal profile into a clear landing page that converts visitors into conversations.
+            </p>
+
+            <div style="border-top: 1px solid var(--border); padding-top: 16px; margin-bottom: 24px; flex-grow: 1;">
+              <p style="font-family: var(--font-heading); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;">Deliverables:</p>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>Clear, client-focused headline that explains what you do</span>
+                </li>
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>Story-driven About section with a direct call to action</span>
+                </li>
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>Featured section structure to showcase your work and booking link</span>
+                </li>
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>Header banner copy and layout direction</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="/book" class="btn btn-primary" style="justify-content: center; text-align: center; width: 100%;">
+              Book a Profile Rewrite
+            </a>
+          </article>
+
+          <!-- Offer B: Monthly Retainer -->
+          <article class="reveal" style="background: var(--bg); border: 2px solid var(--orange); border-radius: 8px; padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; box-shadow: 4px 4px 0 var(--border); position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+              <span class="tag tag-orange" style="font-size: 0.72rem; background: var(--orange); color: #fff;">Monthly Partnership</span>
+              <div style="text-align: right;">
+                <span style="font-size: 1.75rem; font-weight: 800; font-family: var(--font-heading); color: var(--orange);">$600</span>
+                <span style="display: block; font-size: 0.72rem; color: var(--text-muted);">per month</span>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.35rem; margin-bottom: 10px;">Monthly Growth Retainer</h3>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-light); margin-bottom: 14px;">
+              A done-for-you organic content and outreach system designed to build authority and open conversations with qualified prospects.
+            </p>
+
+            <div style="background: rgba(243, 111, 33, 0.08); border-left: 3px solid var(--orange); padding: 8px 12px; border-radius: 0 4px 4px 0; margin-bottom: 18px;">
+              <span style="font-size: 0.84rem; font-weight: 700; color: var(--text);">Focus: Driving steady reach and starting conversations with qualified buyers</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--border); padding-top: 16px; margin-bottom: 24px; flex-grow: 1;">
+              <p style="font-family: var(--font-heading); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;">Weekly Operations (Monday to Friday):</p>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>1 authoritative post written and scheduled daily</span>
+                </li>
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>20 to 25 thoughtful comments on prospect and peer feeds daily</span>
+                </li>
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>10 to 15 personalized connection requests sent daily</span>
+                </li>
+                <li style="display: flex; gap: 8px; align-items: flex-start;">
+                  <span style="color: var(--orange); font-weight: 800;">✓</span>
+                  <span>Weekly progress report covering reach, new connections, and replies</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="/book" class="btn btn-primary" style="justify-content: center; text-align: center; width: 100%;">
+              Book a 15-Minute Call
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ABOUT ME & BIG O SOFT TESTIMONIAL -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container" style="max-width: 820px;">
+        <div class="section-header reveal">
+          <span class="section-label">Background</span>
+          <h2 id="about-heading" set:html={home.aboutHeadline.replace(/\n/g, '<br>')}></h2>
+        </div>
+
+        <div class="reveal" style="font-size: 1.05rem; line-height: 1.7; color: var(--text); display: flex; flex-direction: column; gap: 16px;">
+          <p>
+            I am Ahmad. I am 20 years old, finishing my GED, and building software and content systems in public.
+          </p>
+          <p>
+            I write because clear thinking creates leverage. Most strategists cannot build software, and most developers struggle to write copy that sells. I do both.
+          </p>
+          <p>
+            I work directly with coaches and solo consultants. My job is to take the weekly load of LinkedIn writing and outreach off your plate so you can focus on working with your clients.
+          </p>
+          <p>
+            Every number and case study on this page is backed by real historical records.
+          </p>
+        </div>
+
+        <!-- Verified Testimonial / Experience Card -->
+        <div class="reveal" style="margin-top: 36px; background: var(--bg-dark); border: 2px solid var(--border); border-radius: 8px; padding: clamp(20px, 3vw, 32px); box-shadow: 4px 4px 0 var(--border);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <span class="tag tag-orange" style="font-size: 0.72rem;">Verified Experience</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Nov 2025 – Feb 2026</span>
+          </div>
+          <p style="font-size: 1.02rem; line-height: 1.6; font-style: italic; color: var(--text); margin-bottom: 16px;">
+            "Ahmad worked with Big O Soft as a Content Strategist. He brought exceptional work ethic, structured storytelling, and clear execution to our growth systems."
+          </p>
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 12px;">
+            <div>
+              <span style="font-weight: 700; font-family: var(--font-heading); display: block;">Big O Soft</span>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">Verified Experience Letter on File</span>
+            </div>
+            <span style="color: var(--orange); font-size: 0.85rem; font-weight: 700;">Content Strategist</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. FINAL CALL TO ACTION -->
+    <CTABand heading={home.ctaHeadline} subtext={home.ctaSubtext} btnText="Book a 15-minute call" btnHref="/book" />
 
   </main>
 

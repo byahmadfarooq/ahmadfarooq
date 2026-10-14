@@ -1,50 +1,28 @@
 {
-  "email": "byahmadfarooq@outlook.com",
+  "email": "byahmadfarooq@gmail.com",
   "linkedinUrl": "https://www.linkedin.com/in/byahmadd/",
   "twitterUrl": "https://x.com/ahmaddfaroooq",
   "twitterHandle": "@ahmaddfaroooq",
   "substackUrl": "https://byahmadfarooq.substack.com/",
   "stats": {
     "brandsCount": "4",
-    "revenueLabel": "3×",
-    "yearsInField": "Full"
+    "revenueLabel": "100k+",
+    "yearsInField": "Proof"
   },
   "footerPages": [
-    { "label": "Home", "href": "/" },
-    { "label": "Projects & Teardowns", "href": "/#projects" },
-    { "label": "Behind the Build", "href": "/behind-the-build" },
-    { "label": "Substack", "href": "https://byahmadfarooq.substack.com/" },
-    { "label": "Book a Call", "href": "/book" }
+    { "label": "Work", "href": "/#work" },
+    { "label": "Offer", "href": "/#offer" },
+    { "label": "About", "href": "/#about" },
+    { "label": "Book", "href": "/book" }
   ],
   "footerServices": [
-    { "label": "Founder LinkedIn Inbound", "href": "/#offers" },
-    { "label": "Full-Stack GTM Sprints", "href": "/#offers" },
-    { "label": "Audience & Funnel Architecture", "href": "/#offers" }
+    { "label": "LinkedIn Profile Rewrite", "href": "/#offer" },
+    { "label": "Monthly Growth Retainer", "href": "/#offer" }
   ],
   "clients": [
-    {
-      "name": "Big O Soft"
-    },
-    {
-      "name": "Zedsource"
-    },
-    {
-      "name": "AllRCM"
-    },
-    {
-      "name": "OneSoft"
-    },
-    {
-      "name": "Coin Bureau"
-    },
-    {
-      "name": "Klip AI"
-    },
-    {
-      "name": "Trade Travel Chill"
-    },
-    {
-      "name": "RS Gonzales"
-    }
+    { "name": "Big O Soft" },
+    { "name": "Zedsource" },
+    { "name": "OneSoft" },
+    { "name": "GID Enterprise" }
   ]
 }
